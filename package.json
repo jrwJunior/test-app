@@ -2,6 +2,7 @@
   "name": "yourmodule",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jrwJunior.github.io/test-app",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -9,7 +10,9 @@
     "eject": "react-scripts eject",
     "stylelint:fix": "npx stylelint 'src/**/*.scss' --fix",
     "prettier:fix": "npx prettier --write 'src/**/*.{json,js,jsx}'",
-    "eslint:fix": "npx eslint src/**/*.{js,jsx} --quiet --fix"
+    "eslint:fix": "npx eslint src/**/*.{js,jsx} --quiet --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.8.0",
@@ -18,7 +21,6 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "gh-pages": "^3.2.3",
     "immutable": "^4.0.0-rc.14",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
@@ -47,7 +49,8 @@
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-prettier": "^1.2.0",
-    "stylelint-scss": "^3.20.1"
+    "stylelint-scss": "^3.20.1",
+    "gh-pages": "^3.2.3"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx,json}": [
